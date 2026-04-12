@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /images/
+
+Sitemap: https://wheatbunny.com/sitemap.xml
+
+# Crawl delay for good bots
+Crawl-delay: 10

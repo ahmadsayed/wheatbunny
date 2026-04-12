@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Fresh artisan sourdough bread in Singapore. Long-fermented sourdough with enhanced nutrition, easier digestion. Order freshly baked sourdough country loaves, burger buns, and sandwich bread. Healthy bread option with natural fermentation.">
+    <meta name="keywords" content="sourdough, sourdough bread, artisan bread, healthy bread, sourdough Singapore, bread health, natural fermentation, gut health bread, whole wheat bread, pre-order bakery Singapore, home bakery">
+    <meta name="author" content="Wheat Bunny">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wheatbunny.com/">
+
+    <!-- Geo Tags for Singapore -->
+    <meta name="geo.region" content="SG">
+    <meta name="geo.placename" content="Singapore">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wheatbunny.com/">
+    <meta property="og:title" content="Wheat Bunny - Artisan Sourdough Bakery Singapore">
+    <meta property="og:description" content="Fresh artisan sourdough bread in Singapore. Long-fermented for better nutrition and easier digestion. Order now!">
+    <meta property="og:image" content="https://wheatbunny.com/images/webp/logo.webp">
+    <meta property="og:locale" content="en_SG">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://wheatbunny.com/">
+    <meta property="twitter:title" content="Wheat Bunny - Artisan Sourdough Bakery Singapore">
+    <meta property="twitter:description" content="Fresh artisan sourdough bread in Singapore. Long-fermented for better nutrition and easier digestion. Order now!">
+    <meta property="twitter:image" content="https://wheatbunny.com/images/webp/logo.webp">
+
+    <title>Wheat Bunny - Artisan Sourdough Bakery | Singapore</title>
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Schema.org Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Bakery",
+        "name": "Wheat Bunny",
+        "description": "Artisan sourdough bakery in Singapore. Fresh long-fermented sourdough bread, buns, and cookies made to order.",
+        "url": "https://wheatbunny.com",
+        "image": "https://wheatbunny.com/images/webp/logo.webp",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "SG",
+            "addressLocality": "Singapore"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "Singapore"
+        },
+        "servesCuisine": ["Sourdough Bread", "Artisan Bakery", "Healthy Bread"],
+        "priceRange": "$$",
+        "paymentAccepted": "Cash, PayNow",
+        "currenciesAccepted": "SGD",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Sourdough Products",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Sourdough Country Loaf",
+                        "description": "Classic artisan sourdough with crispy crust and soft, airy crumb"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Sourdough Burger Buns",
+                        "description": "Soft and flavorful sourdough buns"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Sourdough Sandwich Bread",
+                        "description": "Soft-crusted sourdough loaf perfect for sandwiches"
+                    }
+                }
+            ]
+        },
+        "sameAs": [
+            "https://www.instagram.com/thewheatbunny/"
+        ]
+    }
+    </script>
+    <!-- Product Schema: Sourdough Country Loaf -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Sourdough Country Loaf",
+        "description": "Classic artisan loaf with crispy crust and soft, airy crumb. Long-fermented sourdough made with unbleached flour, salt, and water.",
+        "image": "https://wheatbunny.com/images/products/country-loaf/webp/country_load.webp",
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "SGD",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "name": "Large (800-850g)",
+                    "price": "12.00",
+                    "priceCurrency": "SGD",
+                    "availability": "https://schema.org/InStock"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Small (400-450g)",
+                    "price": "9.00",
+                    "priceCurrency": "SGD",
+                    "availability": "https://schema.org/InStock"
+                }
+            ]
+        }
+    }
+    </script>
+    <!-- Product Schema: Sourdough Burger Buns -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Sourdough Burger Buns",
+        "description": "Soft and flavorful sourdough buns, perfect for your gourmet burgers. Made with wheat flour, butter, milk, and egg.",
+        "image": "https://wheatbunny.com/images/products/burger-buns/webp/burger_buns.webp",
+        "offers": {
+            "@type": "Offer",
+            "name": "6 pieces",
+            "price": "8.00",
+            "priceCurrency": "SGD",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+    <!-- Product Schema: Sourdough Sandwich Bread -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Sourdough Sandwich Bread",
+        "description": "Soft-crusted sourdough loaf perfect for sandwiches and toast. Made with extra virgin olive oil and milk for a tender crumb.",
+        "image": [
+            "https://wheatbunny.com/images/products/sandwich-bread/webp/sandwich_bread.webp",
+            "https://wheatbunny.com/images/products/sandwich-bread/sandwitch-bread-display.webp"
+        ],
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "SGD",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "name": "Large (800-850g)",
+                    "price": "12.00",
+                    "priceCurrency": "SGD",
+                    "availability": "https://schema.org/InStock"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Small (400-450g)",
+                    "price": "8.00",
+                    "priceCurrency": "SGD",
+                    "availability": "https://schema.org/InStock"
+                }
+            ]
+        }
+    }
+    </script>
+    <!-- Product Schema: Pizza Sandwich Bread -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Pizza Sandwich Bread",
+        "description": "Fresh sourdough pizza crust — ready for your favorite fillings. Made with extra virgin olive oil for authentic flavor.",
+        "image": "https://wheatbunny.com/images/products/pizza-sandwich-bread/webp/pizza-empty.webp",
+        "offers": {
+            "@type": "Offer",
+            "name": "3 pieces",
+            "price": "12.00",
+            "priceCurrency": "SGD",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+    <!-- Product Schema: Chocolate Chip Cookies -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Chocolate Chip Cookies",
+        "description": "Classic chewy cookies with rich chocolate chips. Made with coconut sugar and real butter (contains milk).",
+        "image": "https://wheatbunny.com/images/products/chocolate-chip-cookies/webp/Chocolate%20chip%20cookies.webp",
+        "offers": {
+            "@type": "Offer",
+            "name": "250g (10-12 pieces)",
+            "price": "10.00",
+            "priceCurrency": "SGD",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+    <!-- Product Schema: Zebra Butter Cookies -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Zebra Butter Cookies",
+        "description": "Beautiful buttery marbled cookies with vanilla and chocolate swirls. Made with real butter and cocoa powder.",
+        "image": "https://wheatbunny.com/images/products/zebra-cookies/webp/Zebra%20cookies.webp",
+        "offers": {
+            "@type": "Offer",
+            "name": "250g (18-22 pieces)",
+            "price": "10.00",
+            "priceCurrency": "SGD",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <picture>
+                <source srcset="images/webp/logo.webp?v=3" type="image/webp">
+                <img src="images/logo.jpg?v=3" alt="Wheat Bunny Logo" class="logo">
+            </picture>
+            <h1>Artisan Sourdough</h1>
+            <p class="tagline">Handcrafted with love, fermented with patience</p>
+            <a href="#menu" class="btn-primary">View Menu</a>
+        </div>
+        <div class="hero-image">
+            <div class="carousel">
+                <div class="carousel-slides">
+                    <div class="carousel-slide">
+                        <picture>
+                            <source srcset="images/webp/Screenshot%202026-03-12%20at%2021-50-11%20Instagram.webp?v=3" type="image/webp">
+                            <img src="images/Screenshot%202026-03-12%20at%2021-50-11%20Instagram.png?v=3" alt="Fresh Sourdough Bread">
+                        </picture>
+                    </div>
+                    <div class="carousel-slide active">
+                        <picture>
+                            <source srcset="images/webp/side-section.webp?v=3" type="image/webp">
+                            <img src="images/side-section.png?v=3" alt="Sourdough Bread Side View">
+                        </picture>
+                    </div>
+                    <div class="carousel-slide">
+                        <picture>
+                            <source srcset="images/products/country-loaf/webp/country_load.webp?v=3" type="image/webp">
+                            <img src="images/products/country-loaf/country_load.jpeg?v=3" alt="Country Loaf">
+                        </picture>
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-prev" aria-label="Previous slide">❮</button>
+                <button class="carousel-arrow carousel-next" aria-label="Next slide">❯</button>
+                <div class="carousel-dots">
+                    <span class="dot" data-slide="0"></span>
+                    <span class="dot active" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>Our Story</h2>
+            <p>Wheat Bunny is a home baker located in Singapore where baking is our passion. Our principle is simple: great bread needs only unbleached flour, salt, and water—slow-fermented sourdough. All our bakes are freshly baked per order. We take this philosophy to all our baking, keeping ingredients simple. Perfect for any meal, snack, or gift. We love sharing our enthusiasm with more people.</p>
+        </div>
+    </section>
+
+    <!-- Fermentation Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2>Our Process</h2>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-5.5 0-10 4.5-10 10 0 2.5 1 4.8 2.5 6.5L12 22l7.5-3.5C21 16.8 22 14.5 22 12c0-5.5-4.5-10-10-10z"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3>5-Year-Old Starter</h3>
+                    <p>Our sourdough is leavened with a mature starter that has been carefully nurtured for over 5 years, developing deep, complex flavors unique to Wheat Bunny.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>21-26 Hour Fermentation</h3>
+                    <p>Each loaf undergoes a slow, cold fermentation lasting 21 to 26 hours. This extended process develops the signature tangy flavor and open crumb structure.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Elevated Nutrition</h3>
+                    <p>Long fermentation breaks down phytic acid, making nutrients more bioavailable. Our bread is easier to digest and packed with natural goodness.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    </div>
+                    <h3>Whole Wheat Blend</h3>
+                    <p>Our unbleached bread flour is mixed with whole wheat, creating earthy, nutty notes and extra fiber while maintaining a light, airy crumb.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu/Prices Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <p class="menu-intro">All prices in SGD. Pre-orders required.</p>
+            
+            <!-- Sourdough Breads Category -->
+            <div class="menu-category">
+                <h3 class="category-title">Sourdough Breads</h3>
+                <div class="menu-grid">
+                    <!-- Country Loaf -->
+                    <div class="menu-card">
+                        <div class="menu-image">
+                            <picture>
+                                <source srcset="images/products/country-loaf/webp/country_load.webp?v=3" type="image/webp">
+                                <img src="images/products/country-loaf/country_load.jpeg?v=3" alt="Country Loaf">
+                            </picture>
+                        </div>
+                        <div class="menu-info">
+                            <h3>Sourdough Country Loaf</h3>
+                            <p class="description">Classic artisan loaf with crispy crust and soft, airy crumb</p>
+                            <div class="ingredients-section">
+                                <h4>Ingredients</h4>
+                                <div class="ingredients-tags">
+                                    <span class="ingredient-tag">Water</span>
+                                    <span class="ingredient-tag">Wheat Flour</span>
+                                    <span class="ingredient-tag">Salt</span>
+                                </div>
+                            </div>
+                            <div class="price-options">
+                                <div class="price-item">
+                                    <span class="size">800-850g</span>
+                                    <span class="price">$12.00</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="size">400-450g</span>
+                                    <span class="price">$9.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Burger Buns -->
+                    <div class="menu-card">
+                        <div class="menu-image">
+                            <picture>
+                                <source srcset="images/products/burger-buns/webp/burger_buns.webp?v=3" type="image/webp">
+                                <img src="images/products/burger-buns/burger_buns.jpeg?v=3" alt="Burger Buns">
+                            </picture>
+                        </div>
+                        <div class="menu-info">
+                            <h3>Sourdough Burger Buns</h3>
+                            <p class="description">Soft and flavorful buns, perfect for your gourmet burgers</p>
+                            <div class="ingredients-section">
+                                <h4>Ingredients</h4>
+                                <div class="ingredients-tags">
+                                    <span class="ingredient-tag">Wheat Flour</span>
+                                    <span class="ingredient-tag">Salt</span>
+                                    <span class="ingredient-tag">Water</span>
+                                    <span class="ingredient-tag">Butter</span>
+                                    <span class="ingredient-tag">Milk</span>
+                                    <span class="ingredient-tag">Egg</span>
+                                    <span class="ingredient-tag">Sugar (2%)</span>
+                                    <span class="ingredient-tag optional">Sesame Seeds (Optional)</span>
+                                </div>
+                            </div>
+                            <div class="price-options">
+                                <div class="price-item">
+                                    <span class="size">6 pieces</span>
+                                    <span class="price">$8.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sandwich Bread -->
+                    <div class="menu-card">
+                        <div class="menu-image-carousel">
+                            <div class="menu-carousel-slides">
+                                <div class="menu-carousel-slide active">
+                                    <picture>
+                                        <source srcset="images/products/sandwich-bread/webp/sandwich_bread.webp?v=3" type="image/webp">
+                                        <img src="images/products/sandwich-bread/sandwich_bread.jpeg?v=3" alt="Sandwich Bread">
+                                    </picture>
+                                </div>
+                                <div class="menu-carousel-slide">
+                                    <picture>
+                                        <source srcset="images/products/sandwich-bread/sandwitch-bread-display.webp?v=3" type="image/webp">
+                                        <img src="images/products/sandwich-bread/sandwitch-bread-display.jpg?v=3" alt="Sandwich Bread Sliced Display">
+                                    </picture>
+                                </div>
+                            </div>
+                            <button class="menu-carousel-arrow menu-carousel-prev" aria-label="Previous slide">❮</button>
+                            <button class="menu-carousel-arrow menu-carousel-next" aria-label="Next slide">❯</button>
+                            <div class="menu-carousel-dots">
+                                <span class="menu-dot active" data-slide="0"></span>
+                                <span class="menu-dot" data-slide="1"></span>
+                            </div>
+                        </div>
+                        <div class="menu-info">
+                            <h3>Sourdough Sandwich Bread</h3>
+                            <p class="description">Soft-crusted loaf, perfect for sandwiches and toast</p>
+                            <div class="ingredients-section">
+                                <h4>Ingredients</h4>
+                                <div class="ingredients-tags">
+                                    <span class="ingredient-tag">Wheat Flour</span>
+                                    <span class="ingredient-tag">Water</span>
+                                    <span class="ingredient-tag">Salt</span>
+                                    <span class="ingredient-tag">Extra virgin olive oil</span>
+                                    <span class="ingredient-tag">Milk</span>
+                                    <span class="ingredient-tag">Sugar (2%)</span>
+                                    <span class="ingredient-tag">Butter</span>
+                                </div>
+                            </div>
+                            <div class="price-options">
+                                <div class="price-item">
+                                    <span class="size">800-850g</span>
+                                    <span class="price">$12.00</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="size">400-450g</span>
+                                    <span class="price">$8.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pizza Sandwich Bread -->
+                    <div class="menu-card">
+                        <div class="menu-image-carousel">
+                            <div class="menu-carousel-slides">
+                                <div class="menu-carousel-slide active">
+                                    <picture>
+                                        <source srcset="images/products/pizza-sandwich-bread/webp/pizza-empty.webp?v=3" type="image/webp">
+                                        <img src="images/products/pizza-sandwich-bread/pizza-empty.png?v=3" alt="Pizza Sandwich Bread">
+                                    </picture>
+                                </div>
+                                <div class="menu-carousel-slide">
+                                    <picture>
+                                        <source srcset="images/products/pizza-sandwich-bread/webp/packed.webp?v=3" type="image/webp">
+                                        <img src="images/products/pizza-sandwich-bread/packed.png?v=3" alt="Pizza Sandwich Bread Packed">
+                                    </picture>
+                                </div>
+                            </div>
+                            <button class="menu-carousel-arrow menu-carousel-prev" aria-label="Previous slide">❮</button>
+                            <button class="menu-carousel-arrow menu-carousel-next" aria-label="Next slide">❯</button>
+                            <div class="menu-carousel-dots">
+                                <span class="menu-dot active" data-slide="0"></span>
+                                <span class="menu-dot" data-slide="1"></span>
+                            </div>
+                        </div>
+                        <div class="menu-info">
+                            <h3>Pizza Sandwich Bread</h3>
+                            <p class="description">Fresh sourdough pizza crust — ready for your favorite fillings</p>
+                            <div class="ingredients-section">
+                                <h4>Ingredients</h4>
+                                <div class="ingredients-tags">
+                                    <span class="ingredient-tag">Water</span>
+                                    <span class="ingredient-tag">Wheat Flour</span>
+                                    <span class="ingredient-tag">Salt</span>
+                                    <span class="ingredient-tag">Extra virgin olive oil</span>
+                                </div>
+                            </div>
+                            <div class="price-options">
+                                <div class="price-item">
+                                    <span class="size">3 pieces</span>
+                                    <span class="price">$12.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: Sourdough Breads -->
+            </div>
+
+            <!-- Desserts Category -->
+            <div class="menu-category">
+                <h3 class="category-title">Desserts — Cheat Treats (Not Sourdough)</h3>
+                <div class="menu-grid">
+                    <!-- Chocolate Chip Cookies -->
+                    <div class="menu-card">
+                        <div class="menu-image">
+                            <picture>
+                                <source srcset="images/products/chocolate-chip-cookies/webp/Chocolate%20chip%20cookies.webp?v=3" type="image/webp">
+                                <img src="images/products/chocolate-chip-cookies/Chocolate%20chip%20cookies.jpg?v=3" alt="Chocolate Chip Cookies">
+                            </picture>
+                        </div>
+                        <div class="menu-info">
+                            <h3>Chocolate Chip Cookies</h3>
+                            <p class="description">Classic chewy cookies with rich chocolate chips</p>
+                            <div class="ingredients-section">
+                                <h4>Ingredients</h4>
+                                <div class="ingredients-tags">
+                                    <span class="ingredient-tag">Wheat Flour</span>
+                                    <span class="ingredient-tag">Butter</span>
+                                    <span class="ingredient-tag">Coconut Sugar</span>
+                                    <span class="ingredient-tag">Chocolate (contains milk)</span>
+                                    <span class="ingredient-tag">Egg</span>
+                                </div>
+                            </div>
+                            <div class="price-options">
+                                <div class="price-item">
+                                    <span class="size">250g (10-12 pieces)</span>
+                                    <span class="price">$10.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zebra Butter Cookies -->
+                    <div class="menu-card">
+                        <div class="menu-image">
+                            <picture>
+                                <source srcset="images/products/zebra-cookies/webp/Zebra%20cookies.webp?v=3" type="image/webp">
+                                <img src="images/products/zebra-cookies/Zebra%20cookies.jpg?v=3" alt="Zebra Butter Cookies">
+                            </picture>
+                        </div>
+                        <div class="menu-info">
+                            <h3>Zebra Butter Cookies</h3>
+                            <p class="description">Beautiful buttery marbled cookies with vanilla and chocolate swirls</p>
+                            <div class="ingredients-section">
+                                <h4>Ingredients</h4>
+                                <div class="ingredients-tags">
+                                    <span class="ingredient-tag">Butter</span>
+                                    <span class="ingredient-tag">Wheat Flour</span>
+                                    <span class="ingredient-tag">Sugar</span>
+                                    <span class="ingredient-tag">Cocoa Powder</span>
+                                </div>
+                            </div>
+                            <div class="price-options">
+                                <div class="price-item">
+                                    <span class="size">250g (18-22 pieces)</span>
+                                    <span class="price">$10.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: Desserts -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Order Section -->
+    <section id="order-info" class="order-info">
+        <div class="container">
+            <h2>How to Order</h2>
+            <p class="order-subtitle">Fresh sourdough, made to order</p>
+            
+            <div class="order-grid">
+                <!-- Order Window -->
+                <div class="order-card">
+                    <div class="order-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </div>
+                    <h3>Order Window</h3>
+                    <p class="order-detail">Sunday — Tuesday</p>
+                    <p class="order-note">Place your orders during these days</p>
+                    <div class="day-indicators">
+                        <span class="day active">S</span>
+                        <span class="day active">M</span>
+                        <span class="day active">T</span>
+                        <span class="day">W</span>
+                        <span class="day">T</span>
+                        <span class="day">F</span>
+                        <span class="day">S</span>
+                    </div>
+                </div>
+
+                <!-- Preparation -->
+                <div class="order-card">
+                    <div class="order-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Preparation</h3>
+                    <p class="order-detail">2 — 3 days</p>
+                    <p class="order-note">Slow-fermented with care</p>
+                </div>
+
+                <!-- Delivery -->
+                <div class="order-card">
+                    <div class="order-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    </div>
+                    <h3>Delivery</h3>
+                    <p class="order-detail">$10 — $20</p>
+                    <p class="order-note">Via Grab Express</p>
+                    <p class="order-hint">East Island preferred</p>
+                </div>
+
+                <!-- Packaging -->
+                <div class="order-card order-card-wide">
+                    <div class="packaging-carousel">
+                        <div class="packaging-slides">
+                            <div class="packaging-slide active">
+                                <picture>
+                                    <source srcset="images/webp/delivery.webp?v=3" type="image/webp">
+                                    <img src="images/delivery.jpg?v=3" alt="Neatly packaged delivery">
+                                </picture>
+                            </div>
+                            <div class="packaging-slide">
+                                <picture>
+                                    <source srcset="images/webp/customers/two-loafs.jpeg.webp?v=3" type="image/webp">
+                                    <img src="images/customers/two-loafs.jpeg.jpg?v=3" alt="Customer photo - Two loaves">
+                                </picture>
+                            </div>
+                            <div class="packaging-slide">
+                                <picture>
+                                    <source srcset="images/webp/customers/two-loafs-cookies-set.webp?v=3" type="image/webp">
+                                    <img src="images/customers/two-loafs-cookies-set.jpg?v=3" alt="Customer photo - Loaves and cookies">
+                                </picture>
+                            </div>
+                        </div>
+                        <button class="packaging-arrow packaging-prev" aria-label="Previous slide">❮</button>
+                        <button class="packaging-arrow packaging-next" aria-label="Next slide">❯</button>
+                        <div class="packaging-dots">
+                            <span class="p-dot active" data-slide="0"></span>
+                            <span class="p-dot" data-slide="1"></span>
+                            <span class="p-dot" data-slide="2"></span>
+                        </div>
+                    </div>
+                    <h3>Perfect for Gifting</h3>
+                    <p class="order-detail">Beautifully Packaged</p>
+                    <p class="order-note">Each loaf is uniquely handcrafted and scored with delightful designs. Every order arrives in elegant packaging—ready to delight as a thoughtful gift for any occasion</p>
+                </div>
+            </div>
+
+            <div class="order-cta">
+                <p class="cta-text">Ready to order? Send us a DM on Instagram!</p>
+                <a href="https://www.instagram.com/thewheatbunny/" target="_blank" class="btn-primary btn-instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    Order on Instagram
+                </a>
+                <p class="order-fine-print">All details confirmed via chat</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="contact-text">Follow us on Instagram for daily bakes and pre-orders</p>
+            <a href="https://www.instagram.com/thewheatbunny/" target="_blank" class="instagram-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                @thewheatbunny
+            </a>
+            <p class="note">Singapore-based • Home bakery • Pre-order only</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <picture>
+                <source srcset="images/webp/logo.webp?v=3" type="image/webp">
+                <img src="images/logo.jpg?v=3" alt="Wheat Bunny" class="footer-logo">
+            </picture>
+            <p>&copy; 2026 Wheat Bunny. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hero Carousel
+        (function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.carousel-prev');
+            const nextBtn = document.querySelector('.carousel-next');
+
+            if (slides.length === 0 || !prevBtn || !nextBtn) return;
+
+            let currentSlide = 1;
+            let previousSlide = 1;
+            let autoPlayInterval;
+            const autoPlayDelay = 4000;
+
+            function showSlide(index) {
+                currentSlide = (index + slides.length) % slides.length;
+
+                slides[previousSlide].classList.remove('active');
+                dots[previousSlide].classList.remove('active');
+
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+
+                previousSlide = currentSlide;
+            }
+
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+            }
+
+            function prevSlide() {
+                showSlide(currentSlide - 1);
+            }
+
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
+            }
+
+            function stopAutoPlay() {
+                clearInterval(autoPlayInterval);
+            }
+
+            nextBtn.addEventListener('click', () => {
+                stopAutoPlay();
+                nextSlide();
+                startAutoPlay();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                stopAutoPlay();
+                prevSlide();
+                startAutoPlay();
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    stopAutoPlay();
+                    showSlide(index);
+                    startAutoPlay();
+                });
+            });
+
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    stopAutoPlay();
+                } else {
+                    startAutoPlay();
+                }
+            });
+
+            startAutoPlay();
+        })();
+
+        // Packaging Carousel (Perfect for Gifting)
+        (function() {
+            const slides = document.querySelectorAll('.packaging-slide');
+            const dots = document.querySelectorAll('.p-dot');
+            const prevBtn = document.querySelector('.packaging-prev');
+            const nextBtn = document.querySelector('.packaging-next');
+
+            if (slides.length === 0 || !prevBtn || !nextBtn) return;
+
+            let currentSlide = 0;
+            let previousSlide = 0;
+            let autoPlayInterval;
+            const autoPlayDelay = 5000;
+
+            function showSlide(index) {
+                currentSlide = (index + slides.length) % slides.length;
+
+                slides[previousSlide].classList.remove('active');
+                dots[previousSlide].classList.remove('active');
+
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+
+                previousSlide = currentSlide;
+            }
+
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+            }
+
+            function prevSlide() {
+                showSlide(currentSlide - 1);
+            }
+
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
+            }
+
+            function stopAutoPlay() {
+                clearInterval(autoPlayInterval);
+            }
+
+            nextBtn.addEventListener('click', () => {
+                stopAutoPlay();
+                nextSlide();
+                startAutoPlay();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                stopAutoPlay();
+                prevSlide();
+                startAutoPlay();
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    stopAutoPlay();
+                    showSlide(index);
+                    startAutoPlay();
+                });
+            });
+
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    stopAutoPlay();
+                } else {
+                    startAutoPlay();
+                }
+            });
+
+            startAutoPlay();
+        })();
+
+        // Menu Image Carousels
+        (function() {
+            const carousels = document.querySelectorAll('.menu-image-carousel');
+
+            carousels.forEach((carousel) => {
+                const slides = carousel.querySelectorAll('.menu-carousel-slide');
+                const dots = carousel.querySelectorAll('.menu-dot');
+                const prevBtn = carousel.querySelector('.menu-carousel-prev');
+                const nextBtn = carousel.querySelector('.menu-carousel-next');
+
+                if (slides.length === 0 || !prevBtn || !nextBtn) return;
+
+                let currentSlide = 0;
+                let previousSlide = 0;
+                let autoPlayInterval;
+                const autoPlayDelay = 6000;
+
+                function showSlide(index) {
+                    currentSlide = (index + slides.length) % slides.length;
+
+                    slides[previousSlide].classList.remove('active');
+                    dots[previousSlide].classList.remove('active');
+
+                    slides[currentSlide].classList.add('active');
+                    dots[currentSlide].classList.add('active');
+
+                    previousSlide = currentSlide;
+                }
+
+                function nextSlide() {
+                    showSlide(currentSlide + 1);
+                }
+
+                function prevSlide() {
+                    showSlide(currentSlide - 1);
+                }
+
+                function startAutoPlay() {
+                    autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
+                }
+
+                function stopAutoPlay() {
+                    clearInterval(autoPlayInterval);
+                }
+
+                nextBtn.addEventListener('click', () => {
+                    stopAutoPlay();
+                    nextSlide();
+                    startAutoPlay();
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    stopAutoPlay();
+                    prevSlide();
+                    startAutoPlay();
+                });
+
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        stopAutoPlay();
+                        showSlide(index);
+                        startAutoPlay();
+                    });
+                });
+
+                carousel.addEventListener('mouseenter', stopAutoPlay);
+                carousel.addEventListener('mouseleave', startAutoPlay);
+
+                startAutoPlay();
+            });
+        })();
+    </script>
+</body>
+</html>

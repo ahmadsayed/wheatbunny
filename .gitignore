@@ -1,0 +1,167 @@
+# =============================================================================
+# CREDENTIALS & SENSITIVE DATA - NEVER COMMIT THESE
+# =============================================================================
+
+# Environment variables and secrets
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+.env.test
+!.env.example
+
+# Cloudflare / Wrangler
+.wrangler/
+wrangler.toml
+wrangler.toml.*
+!wrangler.toml.example
+wrangler.json
+wrangler.jsonc
+.wrangler.toml
+wrangler-pulumi-*.yml
+wrangler-pulumi-*.yaml
+wrangler.config.toml
+wrangler.config.json
+
+# API keys and tokens
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+*.priv
+*.secret
+token
+*_token
+*api_key*
+*apikey*
+*api-secret*
+*client_secret*
+*access_token*
+*refresh_token*
+*credentials*
+
+# SSH keys
+id_rsa
+id_rsa.pub
+id_dsa
+id_dsa.pub
+id_ecdsa
+id_ecdsa.pub
+id_ed25519
+id_ed25519.pub
+.ssh/
+
+# Database credentials
+database.yml
+*database.ini
+*db_config*
+db_credentials*
+
+# =============================================================================
+# DEPENDENCIES
+# =============================================================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# =============================================================================
+# BUILD OUTPUTS & GENERATED FILES
+# =============================================================================
+
+dist/
+build/
+out/
+.output/
+.cache/
+.temp/
+tmp/
+temp/
+
+# =============================================================================
+# LOGS
+# =============================================================================
+
+logs/
+*.log
+*.log.*
+
+# =============================================================================
+# OS & EDITOR FILES
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+
+# Linux
+*~
+.nfs*
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+
+# =============================================================================
+# BACKUP FILES
+# =============================================================================
+
+*.bak
+*.backup
+*.orig
+*.old
+*.save
+*~
+*.copy
+*.tmp
+
+# =============================================================================
+# LOCAL CONFIGURATION
+# =============================================================================
+
+# Local override files (keep example versions)
+config.local.js
+config.local.json
+*.local.yml
+*.local.yaml
+*.local.toml
+
+# =============================================================================
+# TESTING
+# =============================================================================
+
+coverage/
+.nyc_output/
+
+# =============================================================================
+# MISCELLANEOUS
+# =============================================================================
+
+# Ignore any files containing "secret" or "private" in their name
+*secret*
+*private*
+!example*.secret
+!example*secret*
