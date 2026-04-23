@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://thewheatbunny.shop/</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thewheatbunny.shop/release/</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://thewheatbunny.shop/images/webp/logo.webp</image:loc>
+      <image:title>Wheat Bunny Artisan Sourdough Bakery Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://thewheatbunny.shop/images/products/country-loaf/webp/country_load.webp</image:loc>
+      <image:title>Sourdough Country Loaf - Artisan Bread Singapore</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://thewheatbunny.shop/images/products/burger-buns/webp/burger_buns.webp</image:loc>
+      <image:title>Sourdough Burger Buns - Fresh Baked Singapore</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://thewheatbunny.shop/images/products/sandwich-bread/webp/sandwich_bread.webp</image:loc>
+      <image:title>Sourdough Sandwich Bread - Soft Crust Loaf</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://thewheatbunny.shop/images/products/chocolate-chip-cookies/webp/Chocolate%20chip%20cookies.webp</image:loc>
+      <image:title>Chocolate Chip Cookies - Homemade Chewy Cookies</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://thewheatbunny.shop/images/products/zebra-cookies/webp/Zebra%20cookies.webp</image:loc>
+      <image:title>Zebra Butter Cookies - Marbled Vanilla Chocolate</image:title>
+    </image:image>
   </url>
 </urlset>
