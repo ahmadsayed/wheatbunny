@@ -8,7 +8,7 @@ clean:
 # Build release: clean, copy root files, sync optimized images
 release: clean
 	@mkdir -p release
-	@cp index.html styles.css sitemap.xml robots.txt release/
+	@cp index.html styles.css sitemap.xml robots.txt main.js release/
 	@rsync -av --include='*.jpg' --include='*.jpeg' --include='*.png' \
 		--include='*.webp' --include='*/' --exclude='*' images/ release/images/ 2>/dev/null || \
 		cp -r images/* release/images/ 2>/dev/null || true
