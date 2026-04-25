@@ -1,8 +1,6 @@
 ---
-name: add-product
-# prettier-ignore
+name: Add Product
 description: Add a new product to the Wheat Bunny bakery website with Schema.org markup, image optimization, and menu placement
-type: command
 ---
 
 # Add Product to Wheat Bunny Website
