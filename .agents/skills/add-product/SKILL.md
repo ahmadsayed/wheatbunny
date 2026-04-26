@@ -32,7 +32,8 @@ The skill automatically:
 2. **Optimizes** using jpegoptim (JPEG) or optipng/pngquant (PNG)
 3. **Converts to WebP** using cwebp at 85% quality
 4. **Resizes** to target width (default 1200px) maintaining aspect ratio
-5. **Places files** in correct directories:
+5. **Cleans up unused PNGs** — removes any `.png` file in the same directory if a `.jpg` + `.webp` already exist
+6. **Places files** in correct directories:
    - Original optimized: `images/{product-id}.jpg`
    - WebP version: `images/webp/{product-id}.webp`
    - For carousels: `images/{product-id}/{image-name}.jpg`
@@ -61,6 +62,7 @@ The skill automatically:
 - Optimizes JPEG with `jpegoptim --strip-all -m85`
 - Optimizes PNG with `optipng -o2 -strip all` or `pngquant`
 - Creates WebP with `cwebp -q 85`
+- Removes any leftover `.png` files once `.jpg` and `.webp` versions are confirmed
 - Places in correct directory structure
 
 ### 2. HTML Updates
@@ -92,6 +94,7 @@ When invoked, execute these steps:
    # - Resize if needed: convert "$src" -resize 1200x> "images/$filename.jpg"
    # - Optimize JPEG: jpegoptim --strip-all -m85 "images/$filename.jpg"
    # - Create WebP: cwebp -q 85 "images/$filename.jpg" -o "images/webp/$filename.webp"
+   # - Clean up PNG: rm -f "images/$filename.png" "images/webp/$filename.png"
    ```
 
 3. **Read index.html**: `/home/ahmedh/projects/WheatBunny/index.html`
@@ -250,6 +253,16 @@ pngquant --quality=70-85 --strip --force --output "$file" "$file"
 
 # 3. Create WebP
 cwebp -q 85 -mt "$file" -o "${file%.*}.webp"
+
+# 4. Clean up PNG if JPG + WebP exist
+# After confirming both .jpg and .webp were created, remove any .png in the same dir
+for png in "${dir}"/*.png; do
+    [ -f "$png" ] || continue
+    base="${png%.png}"
+    if [ -f "${base}.jpg" ] && [ -f "${base}.webp" ]; then
+        rm -f "$png"
+    fi
+done
 ```
 
 ## Directory Structure
@@ -268,6 +281,8 @@ images/
         └── baguette-2.webp
 ```
 
+**No `.png` files remain** — they are removed after JPG and WebP are generated.
+
 ## Validation Checklist
 
 Before completing, verify:
@@ -276,6 +291,7 @@ Before completing, verify:
 - [ ] JPEG/PNG optimization completed
 - [ ] WebP version created successfully
 - [ ] Images placed in correct directories
+- [ ] Unused `.png` files cleaned up
 - [ ] Product HTML inserted in correct category
 - [ ] Schema.org JSON-LD added to `<head>`
 - [ ] `make release` completed without errors
