@@ -93,6 +93,14 @@
                         "name": "Sourdough Sandwich Bread",
                         "description": "Soft-crusted sourdough loaf perfect for sandwiches"
                     }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Sourdough with Inclusion",
+                        "description": "Level up your sourdough bread with inclusion"
+                    }
                 }
             ]
         },
@@ -256,6 +264,43 @@
         }
     }
     </script>
+    <!-- Product Schema: Sourdough with Inclusion -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Sourdough with Inclusion",
+        "description": "Level up your sourdough bread with inclusion. Choose from Parmesan and Olives, Butter, Double Chocolate Chips, or Parmesan and Jalapeño.",
+        "image": [
+            "https://thewheatbunny.shop/images/products/inclusion/webp/parmesan-olives.webp",
+            "https://thewheatbunny.shop/images/products/inclusion/webp/butter.webp"
+        ],
+        "brand": {
+            "@type": "Brand",
+            "name": "Wheat Bunny"
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "SGD",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "name": "Large (900g)",
+                    "price": "20.00",
+                    "priceCurrency": "SGD",
+                    "availability": "https://schema.org/InStock"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Small (450g)",
+                    "price": "12.00",
+                    "priceCurrency": "SGD",
+                    "availability": "https://schema.org/InStock"
+                }
+            ]
+        }
+    }
+    </script>
     <!-- FAQ Schema -->
     <script type="application/ld+json">
     {
@@ -362,8 +407,8 @@
                     <div class="process-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-5.5 0-10 4.5-10 10 0 2.5 1 4.8 2.5 6.5L12 22l7.5-3.5C21 16.8 22 14.5 22 12c0-5.5-4.5-10-10-10z"/><path d="M12 6v6l4 2"/></svg>
                     </div>
-                    <h3>5-Year-Old Starter</h3>
-                    <p>Our sourdough is leavened with a mature starter that has been carefully nurtured for over 5 years, developing deep, complex flavors unique to Wheat Bunny.</p>
+                    <h3>10-Year-Old Starter</h3>
+                    <p>Our sourdough is leavened with a mature starter that has been carefully nurtured for over 10 years, developing deep, complex flavors.</p>
                 </div>
                 <div class="process-card">
                     <div class="process-icon">
@@ -556,6 +601,55 @@
                             <div class="price-options">
                                 <div class="price-item">
                                     <span class="size">3 pieces</span>
+                                    <span class="price">$12.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sourdough with Inclusion -->
+                    <div class="menu-card">
+                        <div class="menu-image-carousel" role="region" aria-label="Sourdough with inclusion gallery">
+                            <div class="menu-carousel-slides">
+                                <div class="menu-carousel-slide active">
+                                    <picture>
+                                        <source srcset="images/products/inclusion/webp/parmesan-olives.webp?v=3" type="image/webp">
+                                        <img src="images/products/inclusion/parmesan-olives.jpg?v=3" alt="Sourdough with parmesan and olives inclusion" width="1200" height="900" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="menu-carousel-slide">
+                                    <picture>
+                                        <source srcset="images/products/inclusion/webp/butter.webp?v=3" type="image/webp">
+                                        <img src="images/products/inclusion/butter.jpg?v=3" alt="Sourdough with butter inclusion" width="1026" height="1026" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <button class="menu-carousel-arrow menu-carousel-prev" aria-label="Previous slide">❮</button>
+                            <button class="menu-carousel-arrow menu-carousel-next" aria-label="Next slide">❯</button>
+                            <div class="menu-carousel-dots">
+                                <span class="menu-dot active" data-slide="0"></span>
+                                <span class="menu-dot" data-slide="1"></span>
+                            </div>
+                        </div>
+                        <div class="menu-info">
+                            <h3>Sourdough with Inclusion</h3>
+                            <p class="description">Level up your sourdough bread with inclusion</p>
+                            <div class="ingredients-section">
+                                <h4>Choose Your Inclusion</h4>
+                                <div class="ingredients-tags">
+                                    <span class="ingredient-tag">Parmesan and Olives</span>
+                                    <span class="ingredient-tag">Butter</span>
+                                    <span class="ingredient-tag">Double Chocolate Chips</span>
+                                    <span class="ingredient-tag">Parmesan and Jalapeño</span>
+                                </div>
+                            </div>
+                            <div class="price-options">
+                                <div class="price-item">
+                                    <span class="size">900g</span>
+                                    <span class="price">$20.00</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="size">450g</span>
                                     <span class="price">$12.00</span>
                                 </div>
                             </div>
