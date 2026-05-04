@@ -66,16 +66,19 @@ h1, h2, h3 {
     display: flex;
     min-height: 100vh;
     background-color: var(--bg-cream);
+    gap: 40px;
+    padding: 0 60px;
+    justify-content: center;
 }
 
 .hero-content {
-    flex: 1;
+    flex: 0 1 640px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 60px;
-    max-width: 600px;
+    padding: 60px 0;
+    max-width: 640px;
 }
 
 .logo {
@@ -87,16 +90,94 @@ h1, h2, h3 {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     color: var(--primary-color);
-    margin-bottom: 15px;
-    line-height: 1.2;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+/* Subtle shimmer effect for hero title */
+.hero-title {
+    background: linear-gradient(
+        90deg,
+        var(--primary-color) 0%,
+        var(--primary-light) 25%,
+        var(--primary-color) 50%,
+        var(--primary-light) 75%,
+        var(--primary-color) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 6s linear infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+}
+
+/* Mother's Day banner */
+.mothers-day {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #c45e7a;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #fdf2f4 0%, #fce8ec 100%);
+    padding: 18px 36px;
+    border-radius: 50px;
+    border: 3px solid #e8a4b8;
+    box-shadow: 0 6px 28px rgba(196, 94, 122, 0.25);
+    animation: gentleGlow 3s ease-in-out infinite;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.mothers-day::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.4) 50%,
+        transparent 70%
+    );
+    animation: shimmerSlide 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmerSlide {
+    0% { transform: translateX(-100%) translateY(-100%); }
+    100% { transform: translateX(100%) translateY(100%); }
+}
+
+@keyframes gentleGlow {
+    0%, 100% {
+        text-shadow: 0 0 8px rgba(196, 94, 122, 0.3), 0 0 20px rgba(196, 94, 122, 0.15);
+        transform: translateY(0) scale(1);
+        box-shadow: 0 6px 28px rgba(196, 94, 122, 0.25);
+        border-color: #e8a4b8;
+    }
+    50% {
+        text-shadow: 0 0 18px rgba(196, 94, 122, 0.55), 0 0 36px rgba(196, 94, 122, 0.25);
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 12px 40px rgba(196, 94, 122, 0.4);
+        border-color: #f0b8c8;
+    }
 }
 
 .tagline {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     color: var(--text-medium);
-    margin-bottom: 40px;
+    margin-bottom: 48px;
     font-weight: 300;
 }
 
@@ -104,9 +185,10 @@ h1, h2, h3 {
     display: inline-block;
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 16px 40px;
+    padding: 18px 48px;
     border-radius: 50px;
     text-decoration: none;
+    font-size: 1.1rem;
     font-weight: 500;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(168, 138, 138, 0.3);
@@ -119,11 +201,12 @@ h1, h2, h3 {
 }
 
 .hero-image {
-    flex: 1;
+    flex: 0 1 720px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 40px 0;
+    max-width: 720px;
 }
 
 .hero-image img {
@@ -1161,23 +1244,60 @@ footer p {
 }
 
 /* Responsive Design */
+@media (max-width: 1100px) {
+    .hero {
+        gap: 20px;
+        padding: 0 40px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .mothers-day {
+        font-size: 1.6rem;
+        padding: 14px 28px;
+    }
+}
+
 @media (max-width: 968px) {
     .hero {
         flex-direction: column;
+        padding: 0;
+        gap: 0;
     }
     
     .hero-content {
         padding: 40px;
         text-align: center;
         align-items: center;
+        max-width: 100%;
     }
     
     .hero h1 {
         font-size: 2.5rem;
     }
     
+    .mothers-day {
+        font-size: 1.25rem;
+        padding: 12px 22px;
+        white-space: normal;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .btn-primary {
+        padding: 16px 40px;
+        font-size: 1rem;
+    }
+    
     .hero-image {
         padding: 0 40px 40px;
+        max-width: 100%;
+        flex: 0 0 auto;
+        height: auto;
     }
     
     .hero-image img {
@@ -1186,12 +1306,47 @@ footer p {
 }
 
 @media (max-width: 600px) {
-    .hero-content {
-        padding: 30px;
+    .hero {
+        min-height: auto;
     }
-    
+
+    .hero-content {
+        padding: 24px 24px 0;
+    }
+
+    .logo {
+        width: 140px;
+        margin-bottom: 20px;
+    }
+
     .hero h1 {
         font-size: 2rem;
+    }
+
+    .mothers-day {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        margin-bottom: 16px;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+        margin-bottom: 24px;
+    }
+
+    .hero-image {
+        padding: 0 24px 16px;
+        flex: 0 0 auto;
+        height: auto;
+        margin-top: -20px;
+    }
+
+    .hero-image .carousel {
+        height: 300px;
+    }
+
+    .hero-image img {
+        max-height: 300px;
     }
     
     .menu-grid {

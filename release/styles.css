@@ -93,6 +93,57 @@ h1, h2, h3 {
     line-height: 1.2;
 }
 
+/* Subtle shimmer effect for hero title */
+.hero-title {
+    background: linear-gradient(
+        90deg,
+        var(--primary-color) 0%,
+        var(--primary-light) 25%,
+        var(--primary-color) 50%,
+        var(--primary-light) 75%,
+        var(--primary-color) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 6s linear infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+}
+
+/* Mother's Day banner */
+.mothers-day {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #c45e7a;
+    margin-bottom: 20px;
+    letter-spacing: 0.8px;
+    background: linear-gradient(135deg, #fdf2f4 0%, #fce8ec 100%);
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: 2px solid #e8a4b8;
+    box-shadow: 0 4px 20px rgba(196, 94, 122, 0.2);
+    animation: gentleGlow 3s ease-in-out infinite;
+}
+
+@keyframes gentleGlow {
+    0%, 100% {
+        text-shadow: 0 0 6px rgba(196, 94, 122, 0.25), 0 0 12px rgba(196, 94, 122, 0.1);
+        transform: translateY(0);
+        box-shadow: 0 4px 20px rgba(196, 94, 122, 0.2);
+    }
+    50% {
+        text-shadow: 0 0 14px rgba(196, 94, 122, 0.45), 0 0 28px rgba(196, 94, 122, 0.2);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 32px rgba(196, 94, 122, 0.35);
+    }
+}
+
 .tagline {
     font-size: 1.25rem;
     color: var(--text-medium);
@@ -1192,6 +1243,12 @@ footer p {
     
     .hero h1 {
         font-size: 2rem;
+    }
+    
+    .mothers-day {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        margin-bottom: 18px;
     }
     
     .menu-grid {
