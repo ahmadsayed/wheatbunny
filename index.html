@@ -101,6 +101,14 @@
                         "name": "Sourdough with Inclusion",
                         "description": "Level up your sourdough bread with inclusion"
                     }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Mini Loafs",
+                        "description": "Small sourdough bread with inclusion — perfect for taste tests or gift boxes"
+                    }
                 }
             ]
         },
@@ -229,7 +237,7 @@
         "@type": "Product",
         "name": "Chocolate Chip Cookies",
         "description": "Classic chewy cookies with rich chocolate chips. Made with coconut sugar and real butter (contains milk).",
-        "image": "https://thewheatbunny.shop/images/products/chocolate-chip-cookies/webp/Chocolate%20chip%20cookies.webp",
+        "image": "https://thewheatbunny.shop/images/products/chocolate-chip-cookies/webp/coockies_salt.webp",
         "brand": {
             "@type": "Brand",
             "name": "Wheat Bunny"
@@ -298,6 +306,27 @@
                     "availability": "https://schema.org/InStock"
                 }
             ]
+        }
+    }
+    </script>
+    <!-- Product Schema: Mini Loafs -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Mini Loafs",
+        "description": "Small sourdough bread with inclusion — perfect for taste tests or gift boxes. Choose from Parmesan and Olives, Croissant Country Bread, Double Chocolate Chips, or Parmesan and Jalapeño.",
+        "image": "https://thewheatbunny.shop/images/products/mini-loafs/webp/mini-loafs.webp",
+        "brand": {
+            "@type": "Brand",
+            "name": "Wheat Bunny"
+        },
+        "offers": {
+            "@type": "Offer",
+            "name": "~220g",
+            "price": "6.00",
+            "priceCurrency": "SGD",
+            "availability": "https://schema.org/InStock"
         }
     }
     </script>
@@ -657,6 +686,35 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Mini Loafs -->
+                    <div class="menu-card">
+                        <div class="menu-image">
+                            <picture>
+                                <source srcset="images/products/mini-loafs/webp/mini-loafs.webp?v=3" type="image/webp">
+                                <img src="images/products/mini-loafs/mini-loafs.jpg?v=3" alt="Mini sourdough loafs with inclusions for taste testing and gift boxes" width="1026" height="1026" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="menu-info">
+                            <h3>Mini Loafs</h3>
+                            <p class="description">Small sourdough bread with inclusion — perfect for taste tests or gift boxes</p>
+                            <div class="ingredients-section">
+                                <h4>Choose Your Inclusion</h4>
+                                <div class="ingredients-tags">
+                                    <span class="ingredient-tag">Parmesan and Olives</span>
+                                    <span class="ingredient-tag">Croissant Country Bread</span>
+                                    <span class="ingredient-tag">Double Chocolate Chips</span>
+                                    <span class="ingredient-tag">Parmesan and Jalapeño</span>
+                                </div>
+                            </div>
+                            <div class="price-options">
+                                <div class="price-item">
+                                    <span class="size">~220g</span>
+                                    <span class="price">$6.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- END: Sourdough Breads -->
             </div>
@@ -667,11 +725,27 @@
                 <div class="menu-grid">
                     <!-- Chocolate Chip Cookies -->
                     <div class="menu-card">
-                        <div class="menu-image">
-                            <picture>
-                                <source srcset="images/products/chocolate-chip-cookies/webp/Chocolate%20chip%20cookies.webp?v=3" type="image/webp">
-                                <img src="images/products/chocolate-chip-cookies/Chocolate%20chip%20cookies.jpg?v=3" alt="Chewy chocolate chip cookies homemade" width="2040" height="1530" loading="lazy">
-                            </picture>
+                        <div class="menu-image-carousel" role="region" aria-label="Chocolate chip cookies gallery">
+                            <div class="menu-carousel-slides">
+                                <div class="menu-carousel-slide active">
+                                    <picture>
+                                        <source srcset="images/products/chocolate-chip-cookies/webp/coockies_salt.webp?v=3" type="image/webp">
+                                        <img src="images/products/chocolate-chip-cookies/coockies_salt.jpg?v=3" alt="Chocolate chip cookies with salt" width="1026" height="1026" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="menu-carousel-slide">
+                                    <picture>
+                                        <source srcset="images/products/chocolate-chip-cookies/webp/Chocolate%20chip%20cookies.webp?v=3" type="image/webp">
+                                        <img src="images/products/chocolate-chip-cookies/Chocolate%20chip%20cookies.jpg?v=3" alt="Chewy chocolate chip cookies homemade" width="2040" height="1530" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <button class="menu-carousel-arrow menu-carousel-prev" aria-label="Previous slide">❮</button>
+                            <button class="menu-carousel-arrow menu-carousel-next" aria-label="Next slide">❯</button>
+                            <div class="menu-carousel-dots">
+                                <span class="menu-dot active" data-slide="0"></span>
+                                <span class="menu-dot" data-slide="1"></span>
+                            </div>
                         </div>
                         <div class="menu-info">
                             <h3>Chocolate Chip Cookies</h3>
@@ -684,6 +758,7 @@
                                     <span class="ingredient-tag">Coconut Sugar</span>
                                     <span class="ingredient-tag">Chocolate (contains milk)</span>
                                     <span class="ingredient-tag">Egg</span>
+                                    <span class="ingredient-tag optional">Salt (Optional)</span>
                                 </div>
                             </div>
                             <div class="price-options">
