@@ -622,6 +622,11 @@
     if (cartEmptyBtn) cartEmptyBtn.addEventListener('click', emptyCart);
     if (cartOverlay) cartOverlay.addEventListener('click', closeCart);
 
+    const cartBackToMenu = document.getElementById('cart-back-to-menu');
+    if (cartBackToMenu) {
+        cartBackToMenu.addEventListener('click', closeCart);
+    }
+
     if (modalClose) modalClose.addEventListener('click', closeModal);
     if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
 
@@ -705,15 +710,15 @@
         });
     }
 
-    // Make menu cards clickable
+    // Add-to-cart buttons open the product modal
     document.querySelectorAll('.menu-card').forEach((card, index) => {
-        card.style.cursor = 'pointer';
-        card.addEventListener('click', (e) => {
-            // Don't open modal if clicking carousel arrows or dots
-            if (e.target.closest('.menu-carousel-arrow') || e.target.closest('.menu-dot')) return;
-            const product = products[index];
-            if (product) openModal(product.id);
-        });
+        const btn = card.querySelector('.add-to-cart-btn');
+        if (btn) {
+            btn.addEventListener('click', () => {
+                const product = products[index];
+                if (product) openModal(product.id);
+            });
+        }
     });
 
     // Keyboard: Escape closes modal or cart
