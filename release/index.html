@@ -143,7 +143,7 @@
                 {
                     "@type": "Offer",
                     "name": "Small (400-450g)",
-                    "price": "9.00",
+                    "price": "8.00",
                     "priceCurrency": "SGD",
                     "availability": "https://schema.org/InStock"
                 }
@@ -341,7 +341,7 @@
                 "name": "When can I place an order?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "You can place orders from Sunday through Tuesday."
+                    "text": "You can place orders any day of the week."
                 }
             },
             {
@@ -502,7 +502,7 @@
                                 </div>
                                 <div class="price-item">
                                     <span class="size">400-450g</span>
-                                    <span class="price">$9.00</span>
+                                    <span class="price">$8.00</span>
                                 </div>
                             </div>
                         </div>
@@ -817,16 +817,16 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                     </div>
                     <h3>Order Window</h3>
-                    <p class="order-detail">Sunday — Tuesday</p>
-                    <p class="order-note">Place your orders during these days</p>
+                    <p class="order-detail">Every Day</p>
+                    <p class="order-note">Place your orders any day of the week</p>
                     <div class="day-indicators">
                         <span class="day active">S</span>
                         <span class="day active">M</span>
                         <span class="day active">T</span>
-                        <span class="day">W</span>
-                        <span class="day">T</span>
-                        <span class="day">F</span>
-                        <span class="day">S</span>
+                        <span class="day active">W</span>
+                        <span class="day active">T</span>
+                        <span class="day active">F</span>
+                        <span class="day active">S</span>
                     </div>
                 </div>
 
@@ -961,6 +961,87 @@
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
     </a>
+
+    <!-- Cart Toggle Button -->
+    <button id="cart-toggle-btn" class="cart-toggle-btn" aria-label="Open shopping cart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <span id="cart-badge" class="cart-badge" style="display:none">0</span>
+    </button>
+
+    <!-- Cart Overlay -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- Cart Panel -->
+    <div id="cart-panel" class="cart-panel">
+        <div class="cart-panel-header">
+            <h2>Your Cart</h2>
+            <div class="cart-header-actions">
+                <button id="cart-empty-btn" class="cart-empty-btn" aria-label="Empty cart" style="display:none">Empty</button>
+                <button id="cart-close" class="cart-close" aria-label="Close cart">&times;</button>
+            </div>
+        </div>
+        <div class="cart-panel-body">
+            <div id="cart-empty" class="cart-empty">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                <p>Your cart is empty</p>
+                <span class="cart-empty-hint">Click a product to add items</span>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+        </div>
+        <div class="cart-panel-footer">
+            <p class="cart-delivery-note">Cost does not include delivery. Delivery rates vary based on distance and time, and will be communicated via WhatsApp.</p>
+            <p id="cart-delivery-estimate" class="cart-delivery-estimate"></p>
+            <div class="cart-estimated">
+                <span>Estimated Total</span>
+                <span id="cart-total" class="cart-total">$0.00</span>
+            </div>
+            <button id="checkout-btn" class="checkout-btn" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div id="modal-overlay" class="modal-overlay"></div>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close" aria-label="Close product details">&times;</button>
+            <img id="modal-image" class="modal-image" src="" alt="">
+            <div class="modal-body">
+                <h3 id="modal-title" class="modal-title"></h3>
+                <p id="modal-desc" class="modal-desc"></p>
+
+                <div id="modal-sizes-section" class="modal-section">
+                    <h4 class="modal-section-title">Select Size</h4>
+                    <div id="modal-sizes" class="selector-group"></div>
+                </div>
+
+                <div id="modal-inclusions-section" class="modal-section" style="display:none">
+                    <h4 class="modal-section-title">Select Inclusion</h4>
+                    <div id="modal-inclusions" class="selector-group"></div>
+                </div>
+
+                <div id="modal-optional-section" class="modal-section" style="display:none">
+                    <h4 class="modal-section-title">Optional Add-ons</h4>
+                    <div id="modal-optional" class="checkbox-group"></div>
+                </div>
+
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Quantity</h4>
+                    <div class="qty-stepper modal-qty">
+                        <button type="button" id="modal-qty-minus" class="qty-btn" aria-label="Decrease quantity">−</button>
+                        <span id="modal-quantity" class="qty-value">1</span>
+                        <button type="button" id="modal-qty-plus" class="qty-btn" aria-label="Increase quantity">+</button>
+                    </div>
+                </div>
+
+                <button type="button" id="modal-add-btn" class="modal-add-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>
