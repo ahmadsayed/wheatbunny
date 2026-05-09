@@ -288,7 +288,7 @@
             sizes: [
                 { label: '250g (10-12 pieces)', price: 10 }
             ],
-            optionalIngredients: ['Salt']
+            optionalIngredients: ['Flaky salt sprinkle']
         },
         {
             id: 'zebra-butter-cookies',
