@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Sourdough Sandwich Bread",
+    "description": "Soft-crusted sourdough loaf perfect for sandwiches and toast. Made with extra virgin olive oil and milk for a tender crumb.",
+    "image": [
+        "https://thewheatbunny.shop/images/products/sandwich-bread/webp/sandwich_bread.webp",
+        "https://thewheatbunny.shop/images/products/sandwich-bread/sandwitch-bread-display.webp"
+    ],
+    "brand": {
+        "@type": "Brand",
+        "name": "Wheat Bunny"
+    },
+    "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "SGD",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Large (750-770g)",
+                "price": "12.00",
+                "priceCurrency": "SGD",
+                "availability": "https://schema.org/InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Small (400-450g)",
+                "price": "8.00",
+                "priceCurrency": "SGD",
+                "availability": "https://schema.org/InStock"
+            }
+        ]
+    }
+}

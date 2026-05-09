@@ -1,0 +1,72 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Wheat Bunny",
+    "description": "Artisan sourdough bakery in Singapore. Fresh long-fermented sourdough bread, buns, and cookies made to order.",
+    "url": "https://thewheatbunny.shop",
+    "image": "https://thewheatbunny.shop/images/webp/logo.webp",
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "SG",
+        "addressLocality": "Singapore"
+    },
+    "areaServed": {
+        "@type": "Country",
+        "name": "Singapore"
+    },
+    "servesCuisine": ["Sourdough Bread", "Artisan Bakery", "Healthy Bread"],
+    "priceRange": "$$",
+    "paymentAccepted": "Cash, PayNow",
+    "currenciesAccepted": "SGD",
+    "telephone": "+65 8515 7245",
+    "openingHours": "Su,Mo,Tu 00:00-23:59",
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Sourdough Products",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Sourdough Country Loaf",
+                    "description": "Classic artisan sourdough with crispy crust and soft, airy crumb. Made with extra virgin olive oil."
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Sourdough Burger Buns",
+                    "description": "Soft and flavorful sourdough buns"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Sourdough Sandwich Bread",
+                    "description": "Soft-crusted sourdough loaf perfect for sandwiches"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Sourdough with Inclusion",
+                    "description": "Level up your sourdough bread with inclusion"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Mini Loafs",
+                    "description": "Small sourdough bread with inclusion — perfect for taste tests or gift boxes"
+                }
+            }
+        ]
+    },
+    "sameAs": [
+        "https://www.instagram.com/thewheatbunny/"
+    ]
+}

@@ -1,11 +1,11 @@
 ---
 name: Add Product
-description: Add a new product to the Wheat Bunny bakery website with Schema.org markup, image optimization, menu placement, and cart integration
+description: Add a new product to the Wheat Bunny bakery website with Schema.org markup, image optimization, and cart integration
 ---
 
 # Add Product to Wheat Bunny Website
 
-Add a new product to the Wheat Bunny bakery website with full Schema.org markup, optimized images, menu placement, and shopping cart integration.
+Add a new product to the Wheat Bunny bakery website with full Schema.org markup, optimized images, and shopping cart integration.
 
 ## Usage
 
@@ -70,22 +70,18 @@ The skill automatically:
 - Removes any leftover `.png` files once `.jpg` and `.webp` versions are confirmed
 - Places in correct directory structure
 
-### 2. HTML Updates
-- Adds product card with `<picture>` element (WebP + fallback)
-- Adds to appropriate category section
-- Includes ingredients tags, price options
+### 2. Update Product Catalog (`js/products.js`)
+- **Adds product entry to the `products` array in `js/products.js`**
+- This is the single source of truth that powers both the rendered menu cards and the shopping cart modal
+- The `category` field determines which section the product appears in
 
-### 3. JavaScript Cart Catalog Update
-- **Adds product entry to the `products` array in `main.js`**
-- This is required for the shopping cart modal to work
-- The DOM order of `.menu-card` elements must match the array order in `products`
+### 3. Schema.org JSON-LD
+- Creates `schemas/products/{product-id}.json`
+- Product type with name, description, image URL
+- Offer/AggregateOffer with pricing
+- Automatically linked in `index.html` via `<script type="application/ld+json" src="...">`
 
-### 4. Schema.org JSON-LD
-- Adds Product schema to `<head>`
-- Includes image URLs, pricing, availability
-- Uses AggregateOffer for multiple size/price variants
-
-### 5. Release & Deploy
+### 4. Release & Deploy
 - Runs `make release` to sync files
 - Optionally runs `make deploy` to publish
 
@@ -111,96 +107,26 @@ When invoked, execute these steps:
    # - Clean up PNG: rm -f "images/products/$product_id/$name.png"
    ```
 
-4. **Read index.html**: `/home/ahmedh/projects/WheatBunny/index.html`
-
-5. **Generate Product HTML**:
-   - Single image: Standard card with `<picture>` using `images/products/{product-id}/...`
-   - Multiple images: Carousel with navigation dots/arrows
-
-6. **Update main.js cart catalog**: `/home/ahmedh/projects/WheatBunny/main.js`
-   - Find the `const products = [` array
+4. **Update Product Catalog**: `/home/ahmedh/projects/WheatBunny/js/products.js`
+   - Find the `export const products = [` array
    - Insert a new product object **before the closing `];`**
-   - The new entry must match the DOM insertion position (order matters!)
-   - See "Cart Catalog Entry" template below
+   - See "Product Catalog Entry" template below
 
-7. **Generate Schema.org JSON-LD**:
-   - Product type with name, description, image URL
-   - Offer/AggregateOffer with pricing
+5. **Generate Schema.org JSON-LD**:
+   - Create `schemas/products/{product-id}.json`
+   - Include image URLs, pricing, availability
+   - Uses AggregateOffer for multiple size/price variants
 
-8. **Insert into HTML**:
-   - HTML: After last product in category section
-   - JSON-LD: Before `</head>`
+6. **Link Schema in HTML**:
+   - Add `<script type="application/ld+json" src="schemas/products/{product-id}.json"></script>` to `<head>` in `index.html`
 
-9. **Write files** and sync: `make release`
+7. **Write files** and sync: `make release`
 
-10. **Deploy** (if requested): `make deploy`
+8. **Deploy** (if requested): `make deploy`
 
-## Product HTML Templates
+## Product Catalog Entry
 
-### Single Image
-```html
-<!-- {Product Name} -->
-<div class="menu-card" id="{product-id}">
-    <div class="menu-image">
-        <picture>
-            <source srcset="images/products/{product-id}/webp/{filename}.webp?v=3" type="image/webp">
-            <img src="images/products/{product-id}/{filename}.jpg?v=3" alt="{Product Name}" loading="lazy">
-        </picture>
-    </div>
-    <div class="menu-info">
-        <h3>{Product Name}</h3>
-        <p class="description">{description}</p>
-        <div class="ingredients-section">
-            <h4>Ingredients</h4>
-            <div class="ingredients-tags">
-                {ingredient tags}
-            </div>
-        </div>
-        <div class="price-options">
-            <div class="price-item">
-                <span class="size">{size}</span>
-                <span class="price">${price}</span>
-            </div>
-        </div>
-    </div>
-</div>
-```
-
-### Multiple Images (Carousel)
-```html
-<!-- {Product Name} -->
-<div class="menu-card" id="{product-id}">
-    <div class="menu-image-carousel" role="region" aria-label="{Product Name} gallery">
-        <div class="menu-carousel-slides">
-            <div class="menu-carousel-slide active">
-                <picture>
-                    <source srcset="images/products/{product-id}/webp/{image1}.webp?v=3" type="image/webp">
-                    <img src="images/products/{product-id}/{image1}.jpg?v=3" alt="{Product Name}">
-                </picture>
-            </div>
-            <div class="menu-carousel-slide">
-                <picture>
-                    <source srcset="images/products/{product-id}/webp/{image2}.webp?v=3" type="image/webp">
-                    <img src="images/products/{product-id}/{image2}.jpg?v=3" alt="{Product Name} - View 2">
-                </picture>
-            </div>
-        </div>
-        <button class="menu-carousel-arrow menu-carousel-prev" aria-label="Previous slide">❮</button>
-        <button class="menu-carousel-arrow menu-carousel-next" aria-label="Next slide">❯</button>
-        <div class="menu-carousel-dots">
-            <span class="menu-dot active" data-slide="0"></span>
-            <span class="menu-dot" data-slide="1"></span>
-        </div>
-    </div>
-    <div class="menu-info">
-        <!-- same as single image -->
-    </div>
-</div>
-```
-
-## Cart Catalog Entry
-
-The `products` array in `main.js` powers the shopping cart modal. Every new product **must** be added here.
+The `products` array in `js/products.js` is the single source of truth for both menu rendering and the shopping cart.
 
 ### Basic Product
 ```javascript
@@ -208,10 +134,14 @@ The `products` array in `main.js` powers the shopping cart modal. Every new prod
     id: '{product-id}',
     name: '{Product Name}',
     description: '{description}',
-    image: 'images/products/{product-id}/{filename}.jpg',
+    images: [
+        { webp: 'images/products/{product-id}/webp/{filename}.webp?v=3', fallback: 'images/products/{product-id}/{filename}.jpg?v=3', alt: '{Product Name}', width: 1200, height: 900 }
+    ],
+    ingredients: ['Wheat Flour', 'Water', 'Salt'],
     sizes: [
         { label: '{size}', price: {price} }
-    ]
+    ],
+    category: 'Sourdough Breads'
 }
 ```
 
@@ -221,11 +151,15 @@ The `products` array in `main.js` powers the shopping cart modal. Every new prod
     id: '{product-id}',
     name: '{Product Name}',
     description: '{description}',
-    image: 'images/products/{product-id}/{filename}.jpg',
+    images: [
+        { webp: 'images/products/{product-id}/webp/{filename}.webp?v=3', fallback: 'images/products/{product-id}/{filename}.jpg?v=3', alt: '{Product Name}', width: 1200, height: 900 }
+    ],
+    ingredients: ['Wheat Flour', 'Water', 'Salt'],
     sizes: [
         { label: 'Large (800-850g)', price: 12 },
         { label: 'Small (400-450g)', price: 8 }
-    ]
+    ],
+    category: 'Sourdough Breads'
 }
 ```
 
@@ -235,11 +169,14 @@ The `products` array in `main.js` powers the shopping cart modal. Every new prod
     id: '{product-id}',
     name: '{Product Name}',
     description: '{description}',
-    image: 'images/products/{product-id}/{filename}.jpg',
+    images: [
+        { webp: 'images/products/{product-id}/webp/{filename}.webp?v=3', fallback: 'images/products/{product-id}/{filename}.jpg?v=3', alt: '{Product Name}', width: 1200, height: 900 }
+    ],
+    inclusions: ['Parmesan and Olives', 'Double Chocolate Chips', 'Croissant Country Bread'],
     sizes: [
         { label: '{size}', price: {price} }
     ],
-    inclusions: ['Parmesan and Olives', 'Double Chocolate Chips', 'Croissant Country Bread']
+    category: 'Sourdough Breads'
 }
 ```
 
@@ -249,48 +186,68 @@ The `products` array in `main.js` powers the shopping cart modal. Every new prod
     id: '{product-id}',
     name: '{Product Name}',
     description: '{description}',
-    image: 'images/products/{product-id}/{filename}.jpg',
+    images: [
+        { webp: 'images/products/{product-id}/webp/{filename}.webp?v=3', fallback: 'images/products/{product-id}/{filename}.jpg?v=3', alt: '{Product Name}', width: 1200, height: 900 }
+    ],
+    ingredients: ['Wheat Flour', 'Water', 'Salt'],
+    optionalIngredients: ['Sesame Seeds', 'Salt'],
     sizes: [
         { label: '{size}', price: {price} }
     ],
-    optionalIngredients: ['Sesame Seeds', 'Salt']
+    category: 'Sourdough Breads'
 }
 ```
 
-**Critical:** The `image` path is used as the cart thumbnail. It should point to the main product image (usually the first/primary image).
+**Critical:** The `images` array is used for both menu rendering and cart thumbnails. The first image is the primary/cart thumbnail.
+
+### Product with Multiple Images (Carousel)
+```javascript
+{
+    id: '{product-id}',
+    name: '{Product Name}',
+    description: '{description}',
+    images: [
+        { webp: 'images/products/{product-id}/webp/{image1}.webp?v=3', fallback: 'images/products/{product-id}/{image1}.jpg?v=3', alt: '{Product Name}', width: 1200, height: 900 },
+        { webp: 'images/products/{product-id}/webp/{image2}.webp?v=3', fallback: 'images/products/{product-id}/{image2}.jpg?v=3', alt: '{Product Name} - View 2', width: 1200, height: 900 }
+    ],
+    ingredients: ['Wheat Flour', 'Water', 'Salt'],
+    sizes: [
+        { label: '{size}', price: {price} }
+    ],
+    category: 'Sourdough Breads'
+}
+```
 
 ## Schema.org Templates
 
 ### Single Offer
-```html
-<!-- Product Schema: {Product Name} -->
-<script type="application/ld+json">
+```json
 {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": "{Product Name}",
     "description": "{description}",
-    "image": "https://wheatbunny.com/images/products/{product-id}/webp/{filename}.webp",
+    "image": "https://thewheatbunny.shop/images/products/{product-id}/webp/{filename}.webp",
+    "brand": { "@type": "Brand", "name": "Wheat Bunny" },
     "offers": {
         "@type": "Offer",
+        "name": "{size}",
         "price": "{price}",
         "priceCurrency": "SGD",
         "availability": "https://schema.org/InStock"
     }
 }
-</script>
 ```
 
 ### Aggregate Offer (multiple sizes)
-```html
-<!-- Product Schema: {Product Name} -->
-<script type="application/ld+json">
+```json
 {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": "{Product Name}",
     "description": "{description}",
-    "image": "https://wheatbunny.com/images/products/{product-id}/webp/{filename}.webp",
+    "image": "https://thewheatbunny.shop/images/products/{product-id}/webp/{filename}.webp",
+    "brand": { "@type": "Brand", "name": "Wheat Bunny" },
     "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "SGD",
@@ -312,7 +269,6 @@ The `products` array in `main.js` powers the shopping cart modal. Every new prod
         ]
     }
 }
-</script>
 ```
 
 ## Image Optimization Commands
@@ -384,11 +340,10 @@ Before completing, verify:
 - [ ] WebP version created successfully
 - [ ] Images placed in `images/products/{product-id}/` and `images/products/{product-id}/webp/`
 - [ ] Unused `.png` files cleaned up
-- [ ] Product HTML inserted in correct category
-- [ ] **Product entry added to `products` array in `main.js` (cart integration)**
-- [ ] **DOM order of `.menu-card` matches `products` array order in `main.js`**
-- [ ] `image` path in `main.js` entry points to correct image (used as cart thumbnail)
-- [ ] Schema.org JSON-LD added to `<head>`
+- [ ] **Product entry added to `products` array in `js/products.js` (cart integration)**
+- [ ] `images` array in `js/products.js` entry points to correct images (first image used as cart thumbnail)
+- [ ] Schema.org JSON-LD created at `schemas/products/{product-id}.json`
+- [ ] Schema linked in `index.html` `<head>`
 - [ ] `make release` completed without errors
 - [ ] (Optional) `make deploy` completed
 
@@ -398,4 +353,4 @@ Before completing, verify:
 - **Invalid image format**: Convert using ImageMagick or request different file
 - **Optimization tools missing**: Install via `sudo dnf install libwebp-tools jpegoptim optipng pngquant`
 - **HTML parsing error**: Create backup and attempt manual insertion
-- **main.js update error**: Ensure the product object is valid JSON/JS syntax and inserted before the closing `];` of the `products` array
+- **products.js update error**: Ensure the product object is valid JS syntax and inserted before the closing `];` of the `products` array

@@ -1,0 +1,214 @@
+/* Menu Section */
+.menu {
+    padding: 100px 0;
+    background-color: var(--bg-cream);
+}
+
+.menu h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.menu-intro {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 60px;
+    font-size: 0.95rem;
+}
+
+.menu-intro::after {
+    content: " — Pre-order only";
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.menu-category {
+    margin-bottom: 60px;
+}
+
+.menu-category:last-child {
+    margin-bottom: 0;
+}
+
+.category-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--primary-light);
+    display: inline-block;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.menu-card {
+    background-color: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 48px rgba(0, 0, 0, 0.12);
+}
+
+.menu-image {
+    height: 420px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.menu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Ingredients Section - Mobile First Design */
+.ingredients-section {
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(168, 138, 138, 0.15);
+}
+
+.ingredients-section h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ingredients-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ingredient-tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--white);
+    color: var(--text-medium);
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(168, 138, 138, 0.25);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.ingredient-tag:hover {
+    background-color: var(--primary-light);
+    color: var(--white);
+    border-color: var(--primary-light);
+}
+
+.ingredient-tag.optional {
+    background-color: var(--bg-cream);
+    border-style: dashed;
+}
+
+.ingredient-tag.optional::before {
+    content: "✦ ";
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+.menu-info {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.menu-info h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.description {
+    color: var(--text-medium);
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.price-options {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.price-item:last-child {
+    border-bottom: none;
+}
+
+.size {
+    color: var(--text-medium);
+    font-size: 0.95rem;
+}
+
+.price {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.add-to-cart-btn {
+    display: block;
+    width: 100%;
+    margin-top: auto;
+    padding: 14px 24px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(168, 138, 138, 0.3);
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(168, 138, 138, 0.4);
+}
+
+.add-to-cart-btn:active {
+    transform: translateY(0);
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: var(--text-light);
+    font-weight: 400;
+    margin-right: 8px;

@@ -1,0 +1,38 @@
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "When can I place an order?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can place orders any day of the week."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How long does preparation take?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Each order requires 2 to 3 days for our slow-fermentation process."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How much is delivery?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Delivery costs between $10 and $20 via Grab Express. East Island is preferred."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do I order from Wheat Bunny?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can order via WhatsApp at +65 8515 7245 (fastest response) or DM us on Instagram @thewheatbunny."
+            }
+        }
+    ]
+}

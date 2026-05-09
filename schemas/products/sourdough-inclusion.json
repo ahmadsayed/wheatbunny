@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Sourdough with Inclusion",
+    "description": "Level up your sourdough bread with inclusion. Choose from Parmesan and Olives, Croissant Country Bread, Double Chocolate Chips, or Parmesan and Jalapeño.",
+    "image": [
+        "https://thewheatbunny.shop/images/products/inclusion/webp/parmesan-olives.webp",
+        "https://thewheatbunny.shop/images/products/inclusion/webp/butter.webp"
+    ],
+    "brand": {
+        "@type": "Brand",
+        "name": "Wheat Bunny"
+    },
+    "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "SGD",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Large (900g)",
+                "price": "20.00",
+                "priceCurrency": "SGD",
+                "availability": "https://schema.org/InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Small (450g)",
+                "price": "12.00",
+                "priceCurrency": "SGD",
+                "availability": "https://schema.org/InStock"
+            }
+        ]
+    }
+}

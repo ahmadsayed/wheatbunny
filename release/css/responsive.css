@@ -1,0 +1,301 @@
+@media (max-width: 968px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .process {
+        padding: 60px 0;
+    }
+    
+    .process h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .process-card {
+        padding: 30px 20px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+    .hero {
+        gap: 20px;
+        padding: 0 40px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .mothers-day {
+        font-size: 1.6rem;
+        padding: 14px 28px;
+    }
+}
+
+@media (max-width: 968px) {
+    .hero {
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+    }
+    
+    .hero-content {
+        padding: 40px;
+        text-align: center;
+        align-items: center;
+        max-width: 100%;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .mothers-day {
+        font-size: 1.25rem;
+        padding: 12px 22px;
+        white-space: normal;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .btn-primary {
+        padding: 16px 40px;
+        font-size: 1rem;
+    }
+    
+    .hero-image {
+        padding: 0 40px 40px;
+        max-width: 100%;
+        flex: 0 0 auto;
+        height: auto;
+    }
+    
+    .hero-image img {
+        max-height: 50vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 24px 24px 0;
+    }
+
+    .logo {
+        width: 140px;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .mothers-day {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        margin-bottom: 16px;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+        margin-bottom: 24px;
+    }
+
+    .hero-image {
+        padding: 0 24px 16px;
+        flex: 0 0 auto;
+        height: auto;
+        margin-top: -20px;
+    }
+
+    .hero-image .carousel {
+        height: 300px;
+    }
+
+    .hero-image img {
+        max-height: 300px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about, .process, .menu, .contact, .order-info {
+        padding: 60px 0;
+    }
+    
+    .about h2, .process h2, .menu h2, .contact h2, .order-info h2 {
+        font-size: 2rem;
+    }
+    
+    .order-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .order-card {
+        padding: 30px 20px;
+    }
+    
+    .order-card-wide {
+        padding: 0 0 30px 0;
+    }
+    
+    .packaging-image {
+        margin-bottom: 20px;
+    }
+    
+    .order-cta {
+        padding: 30px 20px;
+        margin: 0 20px;
+    }
+    
+    .highlight-preparation {
+        font-size: 1rem !important;
+    }
+    
+    .day {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+
+    /* Mobile ingredients adjustments */
+    .ingredients-section {
+        padding: 14px;
+        margin-bottom: 16px;
+    }
+
+    .ingredients-section h4 {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+    }
+
+    .ingredient-tag {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+
+    /* Mobile packaging carousel adjustments */
+    .packaging-slides {
+        aspect-ratio: 4 / 5;
+    }
+
+    .packaging-carousel {
+        border-radius: 12px 12px 0 0;
+    }
+
+    /* Mobile menu carousel adjustments */
+    .menu-image-carousel {
+        height: 280px;
+    }
+
+    .menu-carousel-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+
+    .menu-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Mobile order methods adjustments */
+    .order-methods {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .order-method {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .method-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .method-name {
+        font-size: 1rem;
+    }
+
+    .method-detail {
+        font-size: 0.9rem;
+    }
+
+    .method-hint {
+        font-size: 0.75rem;
+    }
+
+    /* Mobile floating WhatsApp button */
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .whatsapp-float svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .cart-panel {
+        max-width: 100%;
+    }
+
+    .cart-panel-header,
+    .cart-panel-body,
+    .cart-panel-footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .modal-content {
+        max-height: 95vh;
+        border-radius: 16px;
+    }
+
+    .modal-image {
+        height: 180px;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .modal-body {
+        padding: 18px;
+    }
+
+    .selector-btn {
+        padding: 8px 12px;
+        min-width: 80px;
+        font-size: 0.85rem;
+    }
+
+    .cart-toggle-btn {
+        bottom: 16px;
+        left: 16px;
+        width: 52px;
+        height: 52px;
+    }
+}

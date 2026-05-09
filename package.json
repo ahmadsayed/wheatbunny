@@ -2,15 +2,24 @@
   "name": "wheat-bunny-website",
   "version": "1.0.0",
   "description": "Wheat Bunny Artisan Sourdough Bakery Website",
-  "main": "server.js",
+  "type": "module",
+  "main": "server.cjs",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "start": "node server.cjs",
+    "dev": "node server.cjs",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest --coverage",
+    "test:unit": "NODE_OPTIONS='--experimental-vm-modules' jest --testPathIgnorePatterns=e2e --coverage",
+    "test:e2e": "playwright test -c playwright.config.cjs",
+    "test:e2e:ui": "playwright test -c playwright.config.cjs --ui",
+    "test:watch": "NODE_OPTIONS='--experimental-vm-modules' jest --watch"
   },
   "dependencies": {
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
     "wrangler": "^4.84.1"
   }
 }

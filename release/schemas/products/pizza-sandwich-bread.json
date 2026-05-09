@@ -1,0 +1,18 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Pizza Sandwich Bread",
+    "description": "Fresh sourdough pizza crust — ready for your favorite fillings. Made with extra virgin olive oil for authentic flavor.",
+    "image": "https://thewheatbunny.shop/images/products/pizza-sandwich-bread/webp/pizza-empty.webp",
+    "brand": {
+        "@type": "Brand",
+        "name": "Wheat Bunny"
+    },
+    "offers": {
+        "@type": "Offer",
+        "name": "3 pieces",
+        "price": "12.00",
+        "priceCurrency": "SGD",
+        "availability": "https://schema.org/InStock"
+    }
+}
