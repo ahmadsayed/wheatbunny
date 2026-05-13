@@ -46,3 +46,48 @@ h1, h2, h3 {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+/* ============================================================
+   TEMPORARILY HIDDEN ELEMENTS
+   Menu, ordering, and WhatsApp contacts are hidden to keep
+   the site barebone until online ordering is enabled.
+   Remove these rules to re-enable. Do NOT delete content.
+   ============================================================ */
+
+/* Hide menu section and all menu cards */
+#menu {
+    display: none !important;
+}
+
+/* Hide "How to Order" section */
+#order-info {
+    display: none !important;
+}
+
+/* Hide WhatsApp floating button */
+.whatsapp-float {
+    display: none !important;
+}
+
+/* Hide WhatsApp contact method */
+.whatsapp-method {
+    display: none !important;
+}
+
+/* Hide "View Menu" CTA since menu is hidden */
+.btn-primary[href="#menu"] {
+    display: none !important;
+}
+
+/* Hide cart button and panel (ordering disabled) */
+.cart-toggle-btn,
+#cart-panel,
+#cart-overlay {
+    display: none !important;
+}
+
+/* Hide "Singapore-based • Home bakery" footer note */
+.contact .note {
+    display: none !important;
+}
+
