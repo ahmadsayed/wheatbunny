@@ -115,8 +115,21 @@
 .tagline {
     font-size: 1.4rem;
     color: var(--text-medium);
-    margin-bottom: 48px;
+    margin-bottom: 16px;
     font-weight: 300;
+}
+
+.coming-soon-banner {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 36px;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, var(--bg-light) 0%, #f3e8e8 100%);
+    border: 2px solid var(--primary-light);
+    border-radius: 50px;
+    display: inline-block;
 }
 
 .btn-primary {

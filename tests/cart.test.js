@@ -198,12 +198,12 @@ describe('Cart Module', () => {
       expect(meta.textContent).toContain('Sesame Seeds');
     });
 
-    test('enables checkout button when cart has items', () => {
+    test('checkout button stays disabled when cart has items', () => {
       addToCart('country-loaf', '800-850g', null, [], 1);
       openCart();
 
       const btn = document.getElementById('checkout-btn');
-      expect(btn.disabled).toBe(false);
+      expect(btn.disabled).toBe(true);
     });
 
     test('shows empty button when cart has items', () => {
@@ -400,41 +400,24 @@ describe('Cart Module', () => {
   });
 
   describe('Checkout', () => {
-    test('checkout button opens WhatsApp with order details', () => {
+    test('checkout button is disabled when cart has items', () => {
       addToCart('country-loaf', '800-850g', null, [], 1);
       openCart();
 
-      document.getElementById('checkout-btn').click();
-
-      expect(window.open).toHaveBeenCalled();
-      const url = window.open.mock.calls[0][0];
-      expect(url).toContain('wa.me/6585157245');
-      expect(url).toContain('Hi Wheat Bunny!');
-      expect(url).toContain('Sourdough Country Loaf');
+      const checkoutBtn = document.getElementById('checkout-btn');
+      expect(checkoutBtn.disabled).toBe(true);
     });
 
-    test('checkout includes delivery estimate', () => {
+    test('checkout button is disabled when cart is empty', () => {
+      openCart();
+      const checkoutBtn = document.getElementById('checkout-btn');
+      expect(checkoutBtn.disabled).toBe(true);
+    });
+
+    test('checkout does nothing when clicked', () => {
       addToCart('country-loaf', '800-850g', null, [], 1);
       openCart();
 
-      document.getElementById('checkout-btn').click();
-
-      const url = window.open.mock.calls[0][0];
-      expect(url).toContain('Estimated Delivery Date');
-    });
-
-    test('checkout includes optional ingredients', () => {
-      addToCart('burger-buns', '6 pieces', null, ['Sesame Seeds'], 1);
-      openCart();
-
-      document.getElementById('checkout-btn').click();
-
-      const url = window.open.mock.calls[0][0];
-      expect(url).toContain('Sesame Seeds');
-    });
-
-    test('checkout does nothing when cart is empty', () => {
-      openCart();
       document.getElementById('checkout-btn').click();
       expect(window.open).not.toHaveBeenCalled();
     });

@@ -231,7 +231,6 @@ function renderCart() {
         cartItemsEl.style.display = 'none';
         cartEmptyEl.style.display = 'block';
         cartTotalEl.textContent = '$0.00';
-        if (checkoutBtn) checkoutBtn.disabled = true;
         if (cartEmptyBtn) cartEmptyBtn.style.display = 'none';
         if (cartDeliveryEstimateEl) cartDeliveryEstimateEl.textContent = '';
         return;
@@ -240,7 +239,6 @@ function renderCart() {
     cartItemsEl.style.display = 'block';
     cartEmptyEl.style.display = 'none';
     if (cartEmptyBtn) cartEmptyBtn.style.display = 'inline-block';
-    if (checkoutBtn) checkoutBtn.disabled = false;
     if (cartDeliveryEstimateEl) cartDeliveryEstimateEl.textContent = 'Estimated delivery: ' + getDeliveryEstimate();
 
     cartItemsEl.innerHTML = '';
@@ -374,38 +372,7 @@ export function initCart() {
         });
     }
 
-    if (checkoutBtn) {
-        checkoutBtn.addEventListener('click', () => {
-            if (cart.length === 0) return;
-
-            const lines = [];
-            lines.push('Hi Wheat Bunny! I would like to place an order:%0A');
-
-            cart.forEach((item, idx) => {
-                const lineTotal = item.unitPrice * item.quantity;
-                let line = `${idx + 1}. ${item.name}`;
-                line += `%0A   Size: ${item.size}`;
-                if (item.inclusion) {
-                    line += `%0A   Inclusion: ${item.inclusion}`;
-                }
-                if (item.optional && item.optional.length > 0) {
-                    line += `%0A   Optional: ${item.optional.join(', ')}`;
-                }
-                line += `%0A   Qty: ${item.quantity}`;
-                line += `%0A   $${item.unitPrice.toFixed(2)} each = $${lineTotal.toFixed(2)}`;
-                lines.push(line);
-            });
-
-            lines.push(`%0AEstimated Total: $${getCartTotal().toFixed(2)}`);
-            lines.push(`%0AEstimated Delivery Date: ${getDeliveryEstimate()}`);
-            lines.push('%0A*Note: This cost does not include delivery. Delivery rates vary based on distance and time, and will be communicated via WhatsApp.*');
-            lines.push('%0AThank you!');
-
-            const message = lines.join('%0A');
-            const url = `https://wa.me/6585157245?text=${message}`;
-            window.open(url, '_blank');
-        });
-    }
+    // Checkout disabled — coming soon
 
     // Keyboard: Escape closes modal or cart
     document.addEventListener('keydown', (e) => {

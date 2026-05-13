@@ -121,6 +121,18 @@
     box-shadow: 0 8px 25px rgba(168, 138, 138, 0.25);
 }
 
+.coming-soon-method {
+    background: linear-gradient(135deg, #faf5f5 0%, #f3e8e8 100%);
+    border-color: var(--primary-light);
+    opacity: 0.8;
+    cursor: default;
+}
+
+.coming-soon-method .method-icon {
+    background: linear-gradient(135deg, #c0a0a0, #a08080);
+    color: white;
+}
+
 .method-icon {
     flex-shrink: 0;
     width: 48px;
