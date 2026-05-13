@@ -212,3 +212,10 @@
     color: var(--text-light);
     font-weight: 400;
     margin-right: 8px;
+}
+
+/* Hidden: prices and add-to-cart button (content preserved in DOM) */
+.price-options,
+.add-to-cart-btn {
+    display: none;
+}
